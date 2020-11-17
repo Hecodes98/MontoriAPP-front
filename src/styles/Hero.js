@@ -1,4 +1,15 @@
 import styled from "styled-components";
+import { MdEdit } from "react-icons/md";
+
+export const EditIcon = styled(MdEdit)`
+  position: absolute;
+  bottom: -5px;
+  background: rgb(9, 143, 236);
+  border-radius: 50%;
+  margin-left: 100px;
+  color: #fff;
+  padding:4px;
+`
 export const BackGround = styled.div`
   background: rgb(41, 85, 217);
   background: linear-gradient(
@@ -11,6 +22,7 @@ export const BackGround = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  align-items:center;
 `;
 
 export const Text = styled.p`

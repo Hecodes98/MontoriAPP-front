@@ -30,17 +30,20 @@ function useUserData(URI, bearer, callback) {
   return { info };
 }
 
-export const Navbar = () => {
+export const Navbar = ({children}) => {
   const [{ user }, dispatch] = useStateValue();
   const bearer = `Bearer ${JSON.parse(window.sessionStorage.token)}`;
   const URI = process.env.API_URL;
   const { info } = useUserData(URI, bearer, dispatch);
   return (
+    <React.Fragment>
     <Nav>
       <WrapperNav>
         <LeftMenu user={user} />
         <SearchBar />
       </WrapperNav>
     </Nav>
+    {children}
+    </React.Fragment>
   );
 };

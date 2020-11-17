@@ -7,6 +7,8 @@ import { NotLoggedUser } from "./pages/NotLoggedUser";
 import { EditProfile } from "./pages/EditProfile";
 import { GlobalStyle } from "./GlobalStyles";
 
+import { Navbar } from './components/Navbar'
+
 import { Router, Redirect } from "@reach/router";
 
 import { useStateValue } from "./Context";
@@ -18,12 +20,15 @@ export const App = () => {
     <React.Fragment>
       <GlobalStyle />
       {isAuth ? (
+        <Navbar>
         <Router>
-          <Home path="/home" />
-          <EditProfile path="edit-profile" />
+          
+            <Home path="/home" />
+            <EditProfile path="edit-profile" />
           <Redirect from="/login" to="/home" />
           <Redirect from="/register" to="/home" />
         </Router>
+        </Navbar>
       ) : (
         <Router>
           <Login path="/login" />

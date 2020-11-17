@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from '@reach/router'
 
 import {
   NavButton,
@@ -34,7 +35,7 @@ export const LeftMenu = ({ user }) => {
         </UserInfo>
         <a href="">About</a>
         <a href="">Test</a>
-        <a href="">Editar Perfil</a>
+        <Link to={"/edit-profile"} onClick={() => setOpen(!open)}>Editar Perfil</Link>
       </SideNav>
       {/* </Overlay> */}
       <NavButton onClick={() => setOpen(!open)} />

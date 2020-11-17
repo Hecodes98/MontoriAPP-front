@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "../components/Navbar";
 import { MonBox } from "../components/MonBox";
 import { NextMon } from "../components/NextMon";
 import { Container, Text } from "../styles/Home";
@@ -9,7 +8,6 @@ import { ImQrcode } from "react-icons/im";
 export const Home = () => {
   return (
     <React.Fragment>
-      <Navbar />
       <Container>
         <Text>Monitoria en curso</Text>
         <MonBox>

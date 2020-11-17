@@ -45,3 +45,12 @@ export const Anchor = styled(Link)`
   text-decoration: none;
   color: #0697f2;
 `;
+
+export const Hr = styled.hr`
+  border-radius: 30px;
+  border: none;
+  width: 80px;
+  background: #0282ee;
+  height: 6px;
+  margin: 0 auto;
+`
